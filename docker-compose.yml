@@ -4,7 +4,7 @@ services:
   main-server:
     build: ./main-server
     ports:
-      - "5000:5000"
+      - "81:5000"
     volumes:
       - ./main-server:/app
     command: python Application.py
@@ -12,7 +12,7 @@ services:
   secondary-server:
     build: ./secondary-server
     ports:
-      - "5001:5000"
+      - "82:5000"
     volumes:
       - ./secondary-server:/app
     command: python Secondary.py
